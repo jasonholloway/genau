@@ -1,0 +1,30 @@
+{
+  "name": "genau",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonholloway/genau.git"
+  },
+  "author": "Jason Holloway",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonholloway/genau/issues"
+  },
+  "homepage": "https://github.com/jasonholloway/genau#readme",
+  "devDependencies": {
+    "chai": "^4.1.1"
+  },
+  "dependencies": {
+    "chance": "^1.0.10",
+    "extensible-function": "^1.1.1",
+    "lodash": "^4.17.4"
+  }
+}
