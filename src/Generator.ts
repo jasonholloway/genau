@@ -1,8 +1,11 @@
-const _ = require('lodash');
-const ExtensibleFunction = require('extensible-function');
-const chance = require('chance');
+import _ from 'lodash';
+import ExtensibleFunction from 'extensible-function';
+import chance from 'chance';
 
 class Generator extends ExtensibleFunction {
+
+    private _fnGenerate : any;
+
     constructor(fn) {
         super((...args) => this.generate(undefined, ...args));
         this._fnGenerate = fn;
@@ -48,5 +51,4 @@ function withAmbient(rand, fn) {
     }
 }
 
-
-module.exports = Generator;
+export { Generator };
