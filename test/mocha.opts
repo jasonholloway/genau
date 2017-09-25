@@ -1,1 +1,3 @@
-test/*.test.js
+--require ts-node/register
+--watch-extensions ts
+test/*.test.ts

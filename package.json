@@ -20,11 +20,14 @@
   },
   "homepage": "https://github.com/jasonholloway/genau#readme",
   "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
     "chai": "^4.1.1"
   },
   "dependencies": {
     "chance": "^1.0.10",
     "extensible-function": "^1.1.1",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "seedrandom": "^2.4.3"
   }
 }

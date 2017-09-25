@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
-        "module": "system",
-        "removeComments": true,
+        "module": "commonjs",
         "preserveConstEnums": true,
         "outFile": "built/genau.js",
         "sourceMap": true
