@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import * as seedRandom from 'seedrandom';
 
-let rand = seedRandom('13');
+let rand = seedRandom('otters');
 
 function choose() : number {
     return rand();
@@ -11,6 +11,16 @@ function generate<T>(seed: any, fn: () => T) : T {
     rand = seedRandom(seed.toString());
     return fn();
 }
+
+
+interface GenSetOptions {
+    size: number
+}
+
+function genSet<T>(fn: () => T, opts?: GenSetOptions) : T[] {
+    return [ fn() ];
+}
+
 
 
 describe('choose', () => {
@@ -30,5 +40,20 @@ describe('choose', () => {
         const res2 = generate(13, choose);
         expect(res2).to.not.eql(res1);
     });
+});
+
+describe('sets', () => {
+    it('contain single result as standard', () => {
+        const res = generate('haggis', () => genSet(choose));
+        expect(res).to.have.lengthOf(1);
+    });
+
+    it('can be parameterized by size', () => {
+        const size = 10;
+        const res = generate('haggis', () => genSet(choose, { size }));
+        expect(res).to.have.lengthOf(size);
+    });
 
 });
+
+
